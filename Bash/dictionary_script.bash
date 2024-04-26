@@ -1,8 +1,9 @@
 #!/bin/bash
-# v0.4
+# v0.5
 # Autor: Dixel - https://github.com/Dixel1
 
-# Define the maximum length of the passwords
+# Define the maximum and minimum length of the passwords
+min_length=2
 max_length=4
 
 # Create the output file
@@ -30,7 +31,7 @@ generate_combinations() {
 }
 
 # Loop through the possible lengths
-for ((i=0; i <= max_length; i++))
+for ((i=min_length; i <= max_length; i++))
 do
   generate_combinations "" $i
 done
